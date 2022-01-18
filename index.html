@@ -7,8 +7,8 @@
     <title>Medrite Esclations</title>
 </head>
 <body>
-    <input list="europe-countries" placeholder="Start typing...">
-<datalist id="europe-countries">
+    <input list="Esclations_reqs" placeholder="Start typing...">
+<datalist id="Esclations_reqs">
   <option>Russia</option>
   <option>Germany</option>
   <option>United Kingdom</option>
@@ -54,5 +54,10 @@
   <option>San Marino</option>
   <option>Holy See</option>
 </datalist>
+<script>
+document.getElementById('Esclations_reqs').storeID.onchange = function() {
+    var newaction = this.value;
+    document.getElementById('store').action = newaction;
+};</script>
 </body>
 </html>
