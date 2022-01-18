@@ -48,3 +48,30 @@ body {
 .styling select option {
     padding: 30px;
   }
+.mainb{
+    color: black;
+    text-align: center;
+    border-radius: 30%;
+    left: 50%;
+    top: 50%;
+}
+
+
+.buts {
+	display: flex;
+	flex-direction: column;
+	transform: rotatex(10deg);
+	animation: rotateAngle 6s linear infinite;
+}
+
+:root {
+	--background-color: #ffe5e5;
+	--color: #000000;
+	--feedback-bg-color: #ffffff;
+	--feedback-secondary-color: #ffacac;
+	--feedback-primary-color: #53488d;
+	--feedback-icon-color: #ffffff;
+	--feedback-form-input: #f4f4f4;
+}
+
+
