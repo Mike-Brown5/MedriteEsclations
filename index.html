@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+<script src="./script.js">   </script>
     <input list="Esclations_reqs" placeholder="Start typing...">
 <datalist id="Esclations_reqs" class="slide">
-  <option onselect="myFunction()">Russia</option>
-  <option>Germany</option>
-  <option ><a href="https://dev.to/vuesomedev/autocomplete-dropdown-using-native-html-moi" onselect="myFunction()"> United Kingdom</a></option>
+  <option onselect="myFunction(this)">Russia</option>
+  <option value="germany">Germany</option>
+  <option value="united kindom"> United Kingdom</a></option>
   <option>France</option>
   <option>Italy</option>
   <option>Spain</option>
@@ -56,10 +58,5 @@
   <option>Holy See</option>
 </datalist>
 
-<script>
-function myFunction(){
-    alert("You selected some text!");
-}
-</script>
 </body>
 </html>
