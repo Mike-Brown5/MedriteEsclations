@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medrite Esclations</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body>
 
-<script src="./script.js">   </script>
-    <input list="Esclations_reqs" placeholder="Start typing...">
-<datalist id="Esclations_reqs" class="slide">
-  <option onselect="myFunction(this)">Russia</option>
-  <option value="germany">Germany</option>
-  <option value="united kindom"> United Kingdom</a></option>
-  <option>France</option>
-  <option>Italy</option>
+
+    <input list="Esclations_reqs" name="getEscaltions" placeholder="Start typing..." type="text">
+<datalist id="Esclations_reqs" class="slide" hidden>
+  <option data-value="Russia">Russia</option>
+  <option data-value="Germany">Germany</option>
+  <option data-value="United Kingdom"> United Kingdom</option>
+  <option data-value="1255France">France</option>
+  <!-- <option>Italy</option>
   <option>Spain</option>
   <option>Ukraine</option>
   <option>Poland</option>
@@ -55,8 +55,18 @@
   <option>Monaco</option>
   <option>Liechtenstein</option>
   <option>San Marino</option>
-  <option>Holy See</option>
+  <option>Holy See</option> -->
 </datalist>
+<h1 id="big"></h1>
+<button value="submit">Submit</button>
 
 </body>
+<script>  var select = document.getElementsByName("getEscaltions")[0];
+
+    select.addEventListener('input' , function()
+    {   data_value = document.getElementById("Esclations_reqs").data_value;
+    console.log(data_value);
+        document.getElementById("big").innerHTML="value details is "+ data_value;
+    });
+     </script>
 </html>

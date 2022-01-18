@@ -1,6 +1,6 @@
-var select = document.getElementById("Esclations_reqs");
-var value = select.options[select.selectedIndex].value;
-console.log(value)
-    function myFunction(){
-        alert("You selected some text!");
-    }
+var getval = document.getElementsByName("getEscaltions")[0];
+
+getval.addEventListener('input' , function()
+{
+    document.getElementById('big').innerHTML="value details is "+this.value;
+});

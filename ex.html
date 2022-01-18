@@ -1,23 +1,29 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		<select id="language" onChange="update()">
-			<option value="en">English</option>
-			<option value="es">Español</option>
-			<option value="pt">Português</option>
-		</select>
-		<input type="text" id="value">
-		<input type="text" id="text">
+    <head>
+        <title>Selected Option Value</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <select id="list" onchange="getSelectValue();">
+            <option value="js">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="c#">Csharp</option>
+            <option value="java">Java</option>
+            <option value="node">Node.js</option>
+        </select>
+        <button value="submit">Submit</button>
+    <script>
+        
+        function getSelectValue()
+        {
+            var selectedValue = document.getElementById("list").value;
+            console.log(selectedValue);
+        }
+        getSelectValue();
 
-		<script type="text/javascript">
-			function update() {
-				var select = document.getElementById('language');
-				var option = select.options[select.selectedIndex];
-
-				document.getElementById('value').value = option.value;
-				document.getElementById('text').value = option.text;
-			}
-
-			update();
-		</script>
-	</body>
+    </script>
+    </body>
 </html>
