@@ -8,18 +8,23 @@
     <body>
         
         <select id="list" onchange="getSelectValue();">
-            <option value="js">JavaScript</option>
+            <option value="https://www.youtube.com/results?search_query=change+the+path+of+the+page+on+select+html">JavaScript</option>
             <option value="php">PHP</option>
             <option value="c#">Csharp</option>
             <option value="java">Java</option>
             <option value="node">Node.js</option>
         </select>
-        <button value="submit">Submit</button>
+        <a href="#" id="btn">
+        <button value="submit" >Submit</button></a>
     <script>
-        
+        var select = document.getElementById("list");
         function getSelectValue()
         {
             var selectedValue = document.getElementById("list").value;
+            var btn = document.getElementById("btn")
+        
+    btn.setAttribute("href", selectedValue)
+
             console.log(selectedValue);
         }
         getSelectValue();
