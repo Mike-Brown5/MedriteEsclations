@@ -4,16 +4,18 @@
         <title>Selected Option Value</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        
-        <select id="list" onchange="getSelectValue();">
+        <div class="styling">
+        <select id="list" onchange="getSelectValue();" class="slide">
             <option value="https://www.youtube.com/results?search_query=change+the+path+of+the+page+on+select+html">JavaScript</option>
-            <option value="php">PHP</option>
+            <option value="https://docs.google.com/spreadsheets/d/1UQrE3Q0_oePcHGbvglf81ijD-a9q8V2IVHVulglAKJs/edit#gid=1609218615">PHP</option>
             <option value="c#">Csharp</option>
             <option value="java">Java</option>
             <option value="node">Node.js</option>
         </select>
+    </div>
         <a href="#" id="btn">
         <button value="submit" >Submit</button></a>
     <script>
@@ -29,6 +31,95 @@
         }
         getSelectValue();
 
+        //--------------- theme 
+        $(document).ready(function() {
+
+var inputPreview = $(".input-preview"),
+    input = $(".input");
+
+TweenMax.set(input, {
+  scale: 1.2,
+  alpha: 0
+});
+
+inputPreview.on("click", function(){
+  
+  var that = $(this);
+  
+  that.toggleClass("active");
+  
+  if(that.hasClass("active")){
+    
+    TweenMax.staggerTo(input, 1.25, {
+      scale: 1,
+      alpha: 1,
+      ease: Elastic.easeOut
+    }, .1);   
+  }
+  else {
+    TweenMax.staggerTo(input, 1, {
+      scale: 1.2,
+      alpha: 0,
+      ease: Elastic.easeOut
+    }, .1);
+  }
+});
+
+input.on("click", function() {
+
+  var tlInput = new TimelineMax({
+    onComplete: done
+  });
+
+  var that = $(this),
+    siblings = that.siblings(".input"),
+    data = that.data("val"),
+    top = that.css("top");
+
+  siblings.removeClass("active");
+
+  tlInput.to(siblings, .25, {
+      alpha: 0
+    })
+    .to(that, .25, {
+      scale: 1.2
+    })
+    .to(that, .25, {
+      top: 0,
+    })
+    .set(inputPreview, {
+      display: "none"
+    })
+    .to(that, .25, {
+      scale: 1,
+    })
+    .to(that, .5, {
+      backgroundColor: "#1D77EF"
+    })
+    .set(inputPreview, {
+      text: data,
+      display: "block"
+    })
+    .to(that, .25, {
+      alpha: 0
+    })
+
+  function done() {
+    inputPreview.removeClass("active");
+    that.css("top", top).addClass("active");
+
+    TweenMax.set(input, {
+      scale: 1.2,
+      alpha: 0,
+      backgroundColor: "#fff"
+    });
+  }
+
+});
+
+// copy
+balapaCop("Select Input Interaction", "rgba(255,255,255,.5)");
+});
     </script>
     </body>
 </html>
