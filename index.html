@@ -1,75 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medrite Esclations</title>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-</head>
-<body>
+<html>
+    <head>
+        <title>Selected Option Value</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="styling">
+        <select id="list" onchange="getSelectValue();" class="slide">
+            <option value="https://forms.gle/2HdEUwFyYfcyPBYo7">Add/change pt information</option>
+            <option value="https://forms.gle/rZi5W4C8bagqJCYh7">Send results via callCenter Email</option>
+            <option value="https://forms.gle/hDjDQ5YfnvTLgrpq9">At Home Late Results/Incorrect Information Report</option>
+            <option value="https://forms.gle/34YK2qButjDFZXqC7">Supervisor Call Request</option>
+            <option value="node">choice 4</option>
+        </select>
+    </div>
+        
+            <div class="buts"><a href="#" id="btn">
+        <button value="submit" class="mainb">Submit</button></a></div>
+    <script>
+        var select = document.getElementById("list");
+        function getSelectValue()
+        {
+            var selectedValue = document.getElementById("list").value;
+            var btn = document.getElementById("btn")
+        
+    btn.setAttribute("href", selectedValue)
 
+            console.log(selectedValue);
+        }
+        getSelectValue();
 
-    <input list="Esclations_reqs" name="getEscaltions" placeholder="Start typing..." type="text">
-<datalist id="Esclations_reqs" class="slide" hidden>
-  <option data-value="Russia">Russia</option>
-  <option data-value="Germany">Germany</option>
-  <option data-value="United Kingdom"> United Kingdom</option>
-  <option data-value="1255France">France</option>
-  <!-- <option>Italy</option>
-  <option>Spain</option>
-  <option>Ukraine</option>
-  <option>Poland</option>
-  <option>Romania</option>
-  <option>Netherlands</option>
-  <option>Belgium</option>
-  <option>Czech Republic</option>
-  <option>Greece</option>
-  <option>Portugal</option>
-  <option>Sweden</option>
-  <option>Hungary</option>
-  <option>Belarus</option>
-  <option>Austria</option>
-  <option>Serbia</option>
-  <option>Switzerland</option>
-  <option>Bulgaria</option>
-  <option>Denmark</option>
-  <option>Finland</option>
-  <option>Slovakia</option>
-  <option>Norway</option>
-  <option>Ireland</option>
-  <option>Croatia</option>
-  <option>Moldova</option>
-  <option>Bosnia and Herzegovina</option>
-  <option>Albania</option>
-  <option>Lithuania</option>
-  <option>North Macedonia</option>
-  <option>Slovenia</option>
-  <option>Latvia</option>
-  <option>Estonia</option>
-  <option>Montenegro</option>
-  <option>Luxembourg</option>
-  <option>Malta</option>
-  <option>Iceland</option>
-  <option>Andorra</option>
-  <option>Monaco</option>
-  <option>Liechtenstein</option>
-  <option>San Marino</option>
-  <option>Holy See</option> -->
-</datalist>
-<h1 id="big"></h1>
-<button value="submit">Submit</button>
+        //--------------- theme 
 
-</body>
-<script>  var select = document.getElementsByName("getEscaltions")[0];
-
-    select.addEventListener('input' , function()
-    {   
-        // data_value = document.getElementById("Esclations_reqs").data_value;
-    // console.log(data_value);
-        document.getElementById("big").innerHTML="value details is "+ data_value;
-    });
-     </script>
-     <div class="container"></div>
-     <div class="submit-feedback"></div> submit
+    </script>
+    </body>
 </html>
