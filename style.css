@@ -51,13 +51,21 @@ body {
 .mainb{
     color: black;
     text-align: center;
+    margin-top: 40%; ;
+    /* margin-bottom: 50%; */
+    margin-left: 40%;
+    margin-right: 40%;
+    margin: 30%;
     border-radius: 30%;
+    width: 10%;
+    height: 10%;
     left: 50%;
     top: 50%;
+    size: 30%;
 }
 
 
-.buts {
+/* .buts {
 	display: flex;
 	flex-direction: column;
 	transform: rotatex(10deg);
@@ -74,4 +82,4 @@ body {
 	--feedback-form-input: #f4f4f4;
 }
 
-
+ */
