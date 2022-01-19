@@ -46,22 +46,25 @@ body {
   }
   
 .styling select option {
-    padding: 30px;
+    padding: 50px;
   }
 .mainb{
     color: black;
     text-align: center;
-    margin-top: 40%; ;
+    margin-top: 30%; ;
     /* margin-bottom: 50%; */
-    margin-left: 40%;
+    margin-left: 43%;
     margin-right: 40%;
-    margin: 30%;
+    /* margin: 30%; */
     border-radius: 30%;
     width: 10%;
     height: 10%;
     left: 50%;
     top: 50%;
     size: 30%;
+    font-size: 150%;
+    align-items: center;
+    align-content: center;
 }
 
 
