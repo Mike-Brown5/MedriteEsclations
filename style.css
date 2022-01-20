@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:url("./medical.jpg");
+    background-size:cover;
     background-color: #c5c9cc;
   }
   
@@ -10,6 +11,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 30px 60px;
   }
   
 .styling select {
@@ -18,18 +20,22 @@ body {
     padding: 12px;
     width: 100%;
     border: none;
+    border-radius: 20px;
     font-size: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     -webkit-appearance: button;
     appearance: button;
     outline: none;
   }
+#list *{
+    border-radius: 30px;
+}
 .header{
     text-align: center;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* color: darkblue; */
     /* text-shadow: darkgoldenrod; */
-    color: rgb(9, 24, 240);
+    color: rgb(0, 17, 255);
     text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -38,7 +44,7 @@ body {
 
 @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(70, 44, 44), 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
     to {
       text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
@@ -67,6 +73,7 @@ body {
   
 .styling select option {
     padding: 50px;
+    border-radius: 30px 60px;
   }
 /* 
 .mainb{
@@ -142,7 +149,7 @@ body {
         background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         animation: animatedBackground 5s linear infinite alternate;
     }
-  }
+
   
 @keyframes animatedBackground {
     from {
