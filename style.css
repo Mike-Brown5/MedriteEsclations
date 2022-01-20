@@ -135,14 +135,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-bottom-left-radius: 0;
-    
+    border-radius: 5px 20px 5px;
     background-color: #15c240;
     color: var(--feedback-primary-color);
     
     transition: all 0.3s;
 }
 .mainb:hover{
-        border-radius: 0px;
+    border-radius: 20px 5px 20px;
       
         color: var(--feedback-primary-color);
         background-color: var(--background-color);
